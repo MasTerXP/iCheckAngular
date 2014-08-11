@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="js/iCheck-master/skins/minimal/red.css">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="js/iCheck-master/icheck.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+
+	<script type="text/javascript" src="js/contoller/testController.js"></script>
+</head>
+<body ng-app="VideoResponse">
+	<div ng-controller="submitTest">
+		<div i-Check>
+			<label>Active</label>
+			<label for="radio-active-1"><input type="radio" name="iCheck" id="radio-active-1" value="yes" ng-value="yes" ng-model="radioValue"> Yes</label>
+			<label for="radio-active-2"><input type="radio" name="iCheck" id="radio-active-2" value="no" ng-value="no" ng-model="radioValue"> No</label>
+		</div>
+		Value : {{radioValue}}
+
+		<input type="textbox" ng-model="txt">
+		{{txt}}
+
+		<button name="submit" ng-click="submit()">Submit</button>
+	</div>
+
+
+
+</body>
+
+
+
+</html>
