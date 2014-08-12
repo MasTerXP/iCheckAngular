@@ -10,18 +10,29 @@
 	<script type="text/javascript" src="js/contoller/testController.js"></script>
 </head>
 <body ng-app="VideoResponse">
-	<div ng-controller="submitTest">
-		<div i-Check>
+	<div ng-controller="submitTest" i-check>
+		
 			<label>Active</label>
-			<label for="radio-active-1"><input type="radio" name="iCheck" id="radio-active-1" value="yes" ng-value="yes" ng-model="radioValue"> Yes</label>
-			<label for="radio-active-2"><input type="radio" name="iCheck" id="radio-active-2" value="no" ng-value="no" ng-model="radioValue"> No</label>
-		</div>
+			<label for="radio-active-1"><input type="radio" name="iCheck" id="radio-active-1" value="yes" ng-model="radioValue" > Yes</label>
+			<label for="radio-active-2"><input type="radio" name="iCheck" id="radio-active-2" value="no" ng-model="radioValue" > No</label>
+		
+	</br>
 		Value : {{radioValue}}
-
+	</br>
 		<input type="textbox" ng-model="txt">
 		{{txt}}
 
+	</br>
+		<div id="testNormalRadio">
+			<label>Active</label>
+			<label for="radio-active-t-1"><input type="radio" name="testNormalRadio" id="radio-active-t-1" value="Yes" ng-model="radioValuet"> Yes</label>
+			<label for="radio-active-t-2"><input type="radio" name="testNormalRadio" id="radio-active-t-2" value="No" ng-model="radioValuet" > No</label>
+		</div>
+
+		Normal Radio Value : {{radioValuet}}
+
 		<button name="submit" ng-click="submit()">Submit</button>
+
 	</div>
 
 
