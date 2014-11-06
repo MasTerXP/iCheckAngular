@@ -6,7 +6,7 @@ app.controller("submitTest",['$scope',function($scope){
 		console.log("test");
 		console.log($scope.txt);
 		console.log($scope.radioValue);
-	}
+	};
 }]);
 
 
@@ -46,4 +46,4 @@ app.directive('icheck',[ '$timeout', function($timeout, $parse) {
         });
       }
     };
-  }])
+  }]);

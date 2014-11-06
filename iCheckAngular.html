@@ -13,8 +13,15 @@
 	<div ng-controller="submitTest">
 		<div >
 			<label>Active</label>
+<!--
 			<label for="radio-active-1"><input type="radio" name="iCheck" id="radio-active-1" value="yes" ng-value="yes" ng-model="radioValue" icheck> Yes</label>
 			<label for="radio-active-2"><input type="radio" name="iCheck" id="radio-active-2" value="no" ng-value="no" ng-model="radioValue" icheck> No</label>
+-->
+            <form name="myForm" ng-controller"ExampleController">
+                <input type="radio" ng-model="radVal" ng-value="ok">OK </br>
+                <input type="radio" ng-model="radVal" ng-value="on">NO </br>
+            </form>
+            
 		</div>
 		Value : {{radioValue}}
 

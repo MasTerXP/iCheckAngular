@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link data-require="bootstrap-css@3.0.3" data-semver="3.0.3" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+  <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script data-require="angular.js@*" data-semver="1.2.9" src="http://code.angularjs.org/1.2.9/angular.js"></script>
+  <script data-require="bootstrap@*" data-semver="3.0.3" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/iCheck-master/icheck.js"></script>
+    <script src="js/contoller/bugController.js"></script>
+
+</head>
+
+<body ng-app="bugs_app" ng-controller="bugs_controller">
+<input type="checkbox" class="icheck" value="ahmed" id="ahmed"  name="status">
+<label for="ahmed" >Sample</label>
+  <div id="status_filter" class="filter-box">
+      <div class="filter-head"><label for=""><b>Status</b></label></div>
+      <div ng-repeat="e in bugs.filters" >
+      
+        <input type="checkbox" class="icheck" ng-model="e.value" id="{{e.name}}"  name="{{e.name}}" icheck>
+        <label for="{{e.name}}" >
+          <span>{{e.name}}</span>
+        </label>
+        {{e.value}}
+      </div>
+    </div>
+    <button ng-click="test()">click</button>
+</body>
+
+</html>
